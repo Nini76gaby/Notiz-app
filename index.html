@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notiz App</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" type="image/png" href="img/notiz.png">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+
+</head>
+
+<body onload="init()">
+    <header>
+        <div class="left-section">
+            <img src="img/notiz.png" alt="Notiz">
+            <h1>Notizen</h1>
+            <img src="img/lupe.png" alt="Suchluppe">
+            <label for="search"></label>
+            <input type="search" class="search" placeholder="Suche…">
+            <img onclick="openTrashContainer()" class="waste-paper-basket" src="img/papierkorb.png" alt="Garbage">
+        </div>
+
+    </header>
+    <div class="content" id="content">
+        <div class="inputContainer">
+            <h2>Notizblock</h2>
+            <input id="title" class="inputField" type="text" placeholder="Titel">
+            <textarea id="note" class="textareaField" type="text" placeholder="Notiz schreiben..."></textarea>
+            <button class="btn" onclick="addNewNote()">Neue Notiz</button>
+        </div>
+    </div>
+    <div id="notes_gallery" class="notes-gallery"></div>
+
+    <div id="trash_container" class="trash-container d-none">
+
+        <header>
+
+            <button class="btn1" onclick="closeTrashContainer()">Zurück</button>
+
+            <h3>Papierkorb</h3>
+
+        </header>
+        <section id="trash_gallery" class="trash-gallery"></section>
+    </div>
+
+</body>
+
+<script src="script.js"></script>
+
+</html>
